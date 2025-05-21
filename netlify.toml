@@ -1,0 +1,13 @@
+# netlify.toml
+
+# Tell Netlify where your publish directory is
+[build]
+  publish = "/"
+
+# Define a catch-all redirect to proxy every path to your Shopify store
+[[redirects]]
+  from = "/*"
+  to = "https://venusng.shop/:splat"
+  status = 200
+  force = true
+  forwardQuery = true
